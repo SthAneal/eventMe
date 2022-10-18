@@ -168,7 +168,7 @@ export const Auth = ()=>{
     }
 
     return (
-        <FlexDiv flex="1 1 auto" minHeight="100%" justifyContent="center" alignItems="center" className="authentication"> 
+        <FlexDiv flex="1 1 auto" minHeight="100%" justifyContent="center" alignItems="center" padding="50px 10px" className="authentication"> 
             <FlexDiv flex="0 1 500px"  className="tab" flexDirection="column" justifyContent="start" gap="5px">
                 <FlexDiv flex="1" width="100%" className="tab__capsule-wrapper" gap="2px">
                     <FlexDiv flex="1" className="tab__capsule" justifyContent="center" onClick={(e:React.MouseEvent<HTMLElement>)=>toggleTab(e, newToTab)}>NEW TO EVENTME?</FlexDiv>

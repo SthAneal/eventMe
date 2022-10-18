@@ -19,7 +19,7 @@ export const Layout = ()=>{
                 </Link>
 
                 <Link to="/dashboard" className="top-menu__link">
-                    <FlexDiv flex="0 0 auto" alignItem="center" className="top-menu__link--name">Create Event</FlexDiv>
+                    <FlexDiv flex="0 0 auto" alignItem="center" className="top-menu__link--name">User Login</FlexDiv>
                 </Link>
 
             </FlexDiv>
