@@ -20,13 +20,12 @@ type InputPropsType = {
     margin?:string
     padding?:string
     options?:{value:string,name:string}[]
-    selected?:string
 }
 
 export const Input = ({type, name, label, labelFor, pattern,title, required, errorMessage, flex, width, maxWidth, minWidth, minValue, maxValue, defaultValue, alignSelf, margin, padding}:InputPropsType)=>{
     return(
         <FlexDiv 
-            flex={flex?flex:1} 
+            flex={flex?flex:'1 1 auto'} 
             width={width?width:'100%'} 
             minWidth={minWidth?minWidth:''} 
             maxWidth={maxWidth?maxWidth:''} 
@@ -56,10 +55,10 @@ export const Input = ({type, name, label, labelFor, pattern,title, required, err
 }
 
 
-export const Select = ({name, label, labelFor,title, required, errorMessage, flex, width, maxWidth, minWidth, alignSelf, margin, padding, options, selected}:InputPropsType)=>{
+export const Select = ({name, label, labelFor,title, required, errorMessage, flex, width, maxWidth, minWidth, alignSelf, margin, padding, options, defaultValue}:InputPropsType)=>{
     return(
         <FlexDiv 
-            flex={flex?flex:1} 
+            flex={flex?flex:'1 1 auto'} 
             width={width?width:'100%'} 
             minWidth={minWidth?minWidth:''} 
             maxWidth={maxWidth?maxWidth:''} 
@@ -78,11 +77,13 @@ export const Select = ({name, label, labelFor,title, required, errorMessage, fle
                 id={labelFor} 
                 name={name} 
                 title={title?title:'Select one of the given options.'}
+                defaultValue={defaultValue}
                 required={required?true:false}>
                     <option value=''>Select an event type</option>
                     {
                         options?.map((opt)=>(
-                            opt.value === selected?<option selected value={opt.value}>{opt.name}</option>:<option value={opt.value}>{opt.name}</option>
+                            // opt.value === selected?<option key={opt.value} selected value={opt.value}>{opt.name}</option>:<option value={opt.value}>{opt.name}</option>
+                            <option key={opt.value} value={opt.value}>{opt.name}</option>
                         ))
                     }
 

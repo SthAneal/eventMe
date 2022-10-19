@@ -20,22 +20,22 @@ export const CreateNewEvent = ()=>{
                 </FlexDiv>
 
                 <form className="create-new-event__form">
-                    <Input maxWidth="519px" alignSelf="flex-start" label="EVENT NAME" type="text" name="eventName" labelFor="eventName"/>
-                    <Input maxWidth="519px" alignSelf="flex-start" label="EVENT ADDRESS" type="text" name="eventAddress" labelFor="eventAddress"/>
-                    <FlexDiv flex="0 0 auto" flexWrap="wrap" gap="20px" maxWidth="519px" width="100%">
-                        <Input  alignSelf="flex-start" label="EVENT DATE (Start)" type="datetime-local" name="eventDate" labelFor="eventDate"
+                    <Input maxWidth="520px" alignSelf="flex-start" label="EVENT NAME" type="text" name="eventName" labelFor="eventName"/>
+                    <Input maxWidth="520px" alignSelf="flex-start" label="EVENT ADDRESS" type="text" name="eventAddress" labelFor="eventAddress"/>
+                    <FlexDiv flexWrap="wrap" gap="20px" maxWidth="520px">
+                        <Input width="250px" alignSelf="flex-start" label="EVENT DATE (Start)" type="datetime-local" name="eventDate" labelFor="eventDate"
                             title="Start date should not be a past day and time."
                             required={true}
                             minValue={`${todayDate}T00:00`}
                         />
-                        <Input  alignSelf="flex-start" label="EVENT DATE (End)" type="datetime-local" name="eventDate" labelFor="eventDate"
+                        <Input width="250px" alignSelf="flex-start" label="EVENT DATE (End)" type="datetime-local" name="eventDate" labelFor="eventDate"
                             title="End date should be a future date and time."
                             required={true}
                             minValue={`${todayDate}T00:00`}
                         />
                     </FlexDiv>
                     
-                    <Select maxWidth="519px" alignSelf="flex-start" label="EVENT TYPE" type="text" name="eventType" labelFor="eventType" 
+                    <Select maxWidth="520px" alignSelf="flex-start" label="EVENT TYPE" type="text" name="eventType" labelFor="eventType" 
                         options={[
                                     {value:'music',name:'Music'},
                                     {value:'pop',name:'Pop'},
@@ -47,10 +47,10 @@ export const CreateNewEvent = ()=>{
                                     {value:'tribute',name:'Tribute'},
                                     {value:'rock',name:'Rock'}
                                 ]}
-                        selected={'rock'}
+                        defaultValue={'foodNwine'}
                         required={true}
                     />
-                    <Input maxWidth="519px" alignSelf="flex-start" label="EVENT ORGANISER" type="text" name="eventOrganiser" labelFor="eventOrganiser"/>
+                    <Input maxWidth="520px" alignSelf="flex-start" label="EVENT ORGANISER" type="text" name="eventOrganiser" labelFor="eventOrganiser"/>
                     <Button typeVariant="contained" typeColor="primary" maxWidth="519px"> CREATE EVENT</Button>
                 </form>
             </FlexDiv>
